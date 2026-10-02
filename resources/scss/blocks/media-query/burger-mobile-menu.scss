@@ -73,10 +73,10 @@
         }
 
         &__list {
-            ul li {
+           > ul > li {
                 margin-bottom: 20px;
 
-                a {
+                > a {
                     display: inline-block;
                     font-weight: 500;
                     font-size: 16px;
@@ -93,16 +93,24 @@
 
             .has-sub-menu .sub-menu {
                 display: none;
-                padding-left: 20px;
                 flex: 0 0 100%;
+                margin-top: 12px;
 
-                li a {
-                    display: inline-block;
+                li{
                     font-family: variables.$FontFamily;
-                    font-size: 16px;
+                    font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
+                    margin-bottom: 8px;
+
+                   &:last-child{
+                       margin-bottom: 0;
+                   }
+                    a {
+                        display: inline-block;
+
+                    }
                 }
             }
 
@@ -110,18 +118,15 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 5px;
+                padding: 3px 5px 5px 8px;
                 cursor: pointer;
                 transition: all 0.3s ease;
 
-                &.active {
-                    transform: rotate(180deg);
-
-                    svg path {
-                        stroke: #1C2864;
-                        transition: all 0.3s ease;
-                    }
+                svg path {
+                    fill: variables.$MainColorText;
+                    transition: variables.$time;
                 }
+
             }
         }
         &__contacts{
