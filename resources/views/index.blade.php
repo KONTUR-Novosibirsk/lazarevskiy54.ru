@@ -8,6 +8,18 @@
             </div>
         </div>
     </section>
+    <section class="about">
+        <div class="container">
+            <span class="section-name">О компании</span>
+           <div class="about__content">
+               {!! iblock()->getById(2)?->description !!}
+           </div>
+        </div>
+    </section>
+    @module('shop')
+    <x-shop::hit-products limit="100"/>
+    <x-shop::categories-on-index limit="10"/>
+    @endmodule
     @module('services')
         <x-services::homepage-services/>
     @endmodule
@@ -16,23 +28,10 @@
         <x-slider::slider-component code="main"/>
     </section>
     @endmodule
-    @module('shop')
-    <x-shop::hit-products limit="10"/>
-    <x-shop::categories-on-index limit="10"/>
-    @endmodule
+
     @module('sale')
     <x-sale::active-component limit="5"/>
     @endmodule
-    <section class="about">
-        <div class="about__container container">
-            <h2 class="about-heading">
-                <a href="#">{{ iblock()->getById(1)?->title }}</a>
-            </h2>
-            <div class="about-content">
-                {!! iblock()->getById(1)?->description !!}
-            </div>
-        </div>
-    </section>
 
     <div id="cookieee">
         <form method="POST" action="{{ route('cookie.accept') }}">

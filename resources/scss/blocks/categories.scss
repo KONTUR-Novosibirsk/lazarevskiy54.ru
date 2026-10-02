@@ -1,45 +1,31 @@
 @use '/resources/scss/common/variables';
 
 .categories {
-    padding-bottom: 80px;
+    padding: 100px 0;
+    border-radius: 20px;
+    margin: 0 20px;
 }
 
 .categories-heading {
     margin-bottom: 35px;
-    a {
-        display: inline-flex;
-        align-items: center;
-        font-family: variables.$FontFamily;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        color: variables.$MainColorText;
-        transition: all 0.3s ease;
-
-
-        &::after {
-            content: '';
-            margin-left: 12px;
-            width: 40px;
-            height: 40px;
-            background: url(/resources/images/heading-arrow.svg);
-        }
-    }
-
-    a:hover {
-        color: variables.$AdditionalColorText;
-    }
 }
 
 .categories-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
+    //display: flex;
+    //flex-wrap: wrap;
+    //margin: 0 -15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 .categories-item {
-    margin: 0 15px 30px;
-    flex: 0 0 calc(25% - 30px);
+    background: rgba(6, 25, 4, 0.12);
+
+    //margin: 0 15px 30px;
+    //flex: 0 0 calc(25% - 30px);
+    &:nth-child(2){
+        margin-top: 40px;
+    }
     &__img {
         display: block;
         position: relative;

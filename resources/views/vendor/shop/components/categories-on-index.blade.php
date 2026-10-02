@@ -1,9 +1,11 @@
 @if($categories->count() > 0)
-    <section class="categories">
+    <section class="categories" style="background: no-repeat center/cover url('{{ settingsImage(\Modules\Shop\App\Models\ShopProduct::class, 'shopImage')?->getFull() }}')">
         <div class="categories__container container">
-            <h2 class="categories-heading">
-                <a href="{{ route('shop.index') }}">Категории</a>
-            </h2>
+            <div  class="categories-heading">
+                <span class="section-name">Каталог</span>
+                <h2>Категории продукции</h2>
+            </div>
+
             <div class="categories-list">
                 @foreach($categories as $category)
                     <div class="categories-item">

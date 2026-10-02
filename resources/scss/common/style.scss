@@ -123,11 +123,10 @@ h2 {
 
 h3 {
     font-family: variables.$TitleFontFamily;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.25;
+    margin-bottom: 32px;
 }
 
 h4 {
@@ -232,6 +231,22 @@ ul {
     text-decoration-thickness: 7%;
     text-decoration-skip-ink: auto;
 
+}
+.section-name{
+    width: max-content;
+    padding: 9px 23px;
+    border-radius: 40px;
+    border: 1px dashed #507C4D;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &:before{
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: no-repeat center/contain url('/public/images/title-icon.svg');
+    }
 }
 @media (max-width: 768px) {
     h1 {
