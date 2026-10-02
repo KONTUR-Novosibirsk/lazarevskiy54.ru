@@ -1,42 +1,20 @@
 @use '/resources/scss/common/variables';
 
-@media (max-width: 992px) {
-    .header-burger {
-        display: block;
-        position: relative;
-        width: 22px;
-        height: 18px;
-        margin-right: 30px;
-    }
-
-    .header-burger::before,
-    .header-burger::after {
-        content: '';
-        background-color: #000;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        transition: all 0.3s ease 0s;
-        border-radius: 20px;
-    }
-
-    .header-burger::before {
-        top: 0;
-    }
-
-    .header-burger::after {
-        bottom: 0;
-    }
-
-    .header-burger__line {
-        position: absolute;
-        background-color: #000;
-        width: 100%;
-        right: 0;
-        height: 2px;
-        top: 45%;
-        border-radius: 20px;
+.header-burger{
+    display: none;
+}
+@media (max-width: 1100px) {
+    .header-burger,
+    .burger-menu__close{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: variables.$AdditionalColorText;
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+        cursor: pointer;
     }
 
     .burger-menu {
@@ -59,67 +37,52 @@
             pointer-events: all;
         }
 
-        &__heading {
-            font-family: variables.$FontFamily;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            margin-bottom: 15px;
-        }
-
         &__top {
             display: flex;
-            flex-wrap: nowrap;
-            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             position: absolute;
             top: 0;
             left: 0;
-            height: 150px;
+            height: 109px;
             width: 100%;
             background: #FFF;
-            padding: 30px;
+            padding: 12px 20px;
             z-index: 150;
         }
 
         &__logo {
-        height: 40px;
-        width: 150px;
-        object-fit: contain;
-        }
-
-        &__close {
-            cursor: pointer;
-            height: 40px;
-            width: 40px;
-            text-transform: uppercase;
+            height: 85px;
+            width: 71px;
+            object-fit: contain;
         }
 
         &__content {
             position: absolute;
             left: 0;
-            top: 150px;
-            height: calc(100% - 150px);
+            top: 109px;
+            height: calc(100% - 109px);
             width: 100%;
             background: #fff;
             z-index: 150;
-            padding: 30px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             overflow: auto;
-            padding-bottom: 85px;
         }
 
         &__list {
-            ul li a {
-                display: inline-block;
-                padding: 10px;
-                color: variables.$MainColorText;
-                font-family: variables.$FontFamily;
-                font-size: 22px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
+            ul li {
+                margin-bottom: 20px;
+
+                a {
+                    display: inline-block;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                }
             }
 
             .has-sub-menu {
@@ -161,25 +124,24 @@
                 }
             }
         }
+        &__contacts{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
 
-        &__item {
-            position: relative;
-            display: block;
-            width: 100%;
-            border-bottom: 1px solid #c2c2c2;
-            transition: all 0.3s ease 0s;
+            &__item{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 110%;
+            }
         }
-
-        &__section {
-            position: relative;
-            display: block;
-            width: 100%;
-            padding: 15px 60px 15px 20px;
-            color: #373737;
-            font-size: 16px;
-            font-weight: 700;
+        .btn{
+            width: calc(100% - 46px);
         }
-
         &__shadow {
             position: fixed;
             opacity: 0;
@@ -194,12 +156,3 @@
       }
 }
 
-@media (max-width: 768px) {
-    .burger-menu__heading {
-        font-size: 24px;
-    }
-
-    .burger-menu__list ul li a {
-        font-size: 18px;
-    }
-}

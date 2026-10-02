@@ -178,18 +178,19 @@ ul {
 .btn{
     width: fit-content;
     display: block;
-    padding: 20px 40px;
+    padding: 16px 24px;
     border-radius: 100px;
     background: variables.$AdditionalColorText;
     color: #FFF;
     font-family: variables.$TitleFontFamily;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 100%;
     text-transform: uppercase;
+    white-space: nowrap;
     position: relative;
-    margin-right: 65px;
-    box-shadow: 65px 0 0 0 #134E09;
+    margin-right: 46px;
+    box-shadow: 46px 0 0 0 #134E09;
     z-index: 1;
 
     &:after{
@@ -197,7 +198,7 @@ ul {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: -40px;
+        right: -30px;
         width: 17px;
         height: 14px;
         background: no-repeat center/contain url('/public/images/button-arrow.svg');
@@ -216,8 +217,19 @@ ul {
         transition: variables.$time;
     }
     &:hover:before{
-        transform: translateX(65px);
+        transform: translateX(46px);
     }
+
+}
+.phone{
+    white-space: nowrap;
+}
+.mail{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 7%;
+    text-decoration-skip-ink: auto;
 
 }
 @media (max-width: 768px) {

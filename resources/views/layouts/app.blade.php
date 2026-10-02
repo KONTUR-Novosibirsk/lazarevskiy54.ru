@@ -41,7 +41,7 @@
                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path d="M15.0986 12.251L11.6668 12.916C9.34869 11.7525 7.91677 10.416 7.08344 8.33268L7.72506 4.89093L6.5122 1.66602H3.38644C2.44681 1.66602 1.70689 2.4425 1.84722 3.37158C2.19756 5.69102 3.23054 9.89643 6.2501 12.916C9.4211 16.087 13.9882 17.463 16.5018 18.0099C17.4724 18.2212 18.3334 17.4639 18.3334 16.4706V13.4837L15.0986 12.251Z" stroke="#D3D7DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                </svg>
-                               <a href="tel:{{settings('phone')}}">{{settings('phone')}}</a>
+                               <a href="tel:{{settings('phone')}}" class="phone">{{settings('phone')}}</a>
                            </div>
                        @endif
                        @if(settings('emailPublic'))
@@ -50,12 +50,19 @@
                                    <path d="M7 9L12 12.5L17 9" stroke="#D3D7DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                    <path d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z" stroke="#D3D7DB" stroke-width="1.5"/>
                                </svg>
-                               <a href="mailto:{{settings('emailPublic')}}">{{settings('emailPublic')}}</a>
+                               <a href="mailto:{{settings('emailPublic')}}" class="mail">{{settings('emailPublic')}}</a>
                            </div>
                        @endif
                    </div>
                    <button class="btn" data-fancybox data-src="#feedback-popup">Заказать звонок</button>
                </div>
+                <div class="header-burger">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1" y1="6.5" x2="23" y2="6.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="1" y1="12.5" x2="17" y2="12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="1" y1="18.5" x2="23" y2="18.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </header>
@@ -65,14 +72,38 @@
                 <img src="{{ asset('/images/logo.svg') }}" alt="" class="burger-menu__logo">
             </a>
             <div class="burger-menu__close">
-                <img src="{{ asset('/images/catalog-menu__close.svg') }}" alt="">
+                <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="2.40841" y1="1.62804" x2="21.128" y2="24.0916" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="2.87196" y1="24.0916" x2="21.5916" y2="1.62804" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
             </div>
         </div>
         <div class="burger-menu__content">
-            <div class="burger-menu__heading">Меню</div>
             <nav class="burger-menu__list">
-                <x-menu::base-menu-component code="catalog" parent-css="menu"/>
+                <x-menu::base-menu-component code="main" parent-css="menu"/>
             </nav>
+            <div class="burger-menu__bottom">
+                <div class="burger-menu__contacts">
+                    @if(settings('phone'))
+                        <div class="burger-menu__contacts__item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.0986 12.251L11.6668 12.916C9.34869 11.7525 7.91677 10.416 7.08344 8.33268L7.72506 4.89093L6.5122 1.66602H3.38644C2.44681 1.66602 1.70689 2.4425 1.84722 3.37158C2.19756 5.69102 3.23054 9.89643 6.2501 12.916C9.4211 16.087 13.9882 17.463 16.5018 18.0099C17.4724 18.2212 18.3334 17.4639 18.3334 16.4706V13.4837L15.0986 12.251Z" stroke="#1BB400" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <a href="tel:{{settings('phone')}}" class="phone">{{settings('phone')}}</a>
+                        </div>
+                    @endif
+                    @if(settings('emailPublic'))
+                        <div class="burger-menu__contacts__item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 9L12 12.5L17 9" stroke="#1BB400" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z" stroke="#1BB400" stroke-width="1.5"/>
+                            </svg>
+                            <a href="mailto:{{settings('emailPublic')}}" class="mail">{{settings('emailPublic')}}</a>
+                        </div>
+                    @endif
+                </div>
+                <button class="btn" data-fancybox data-src="#feedback-popup">Заказать звонок</button>
+            </div>
         </div>
         <div class="burger-menu__shadow"></div>
     </div>
