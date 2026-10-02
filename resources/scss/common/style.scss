@@ -187,6 +187,7 @@ ul {
     font-size: 16px;
     line-height: 100%;
     text-transform: uppercase;
+    text-align: center;
     white-space: nowrap;
     position: relative;
     margin-right: 46px;
@@ -234,7 +235,7 @@ ul {
 }
 @media (max-width: 768px) {
     h1 {
-        font-size: 36px;
+        font-size: 40px;
         margin-bottom: 20px;
     }
 
@@ -255,10 +256,7 @@ ul {
 }
 
 @media (max-width: 576px) {
-    h1 {
-        font-size: 26px;
-        margin-bottom: 20px;
-    }
+
 
     h2 {
         font-size: 22px;

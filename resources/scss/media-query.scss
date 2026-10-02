@@ -3,7 +3,7 @@
 @use "blocks/media-query/album";
 @use "blocks/media-query/articles";
 @use "blocks/media-query/brands";
-@use "blocks/media-query/burger-mobile-menu";
+
 @use "blocks/media-query/cart";
 @use "blocks/media-query/catalog";
 @use "blocks/media-query/catalog-mobile-menu";
@@ -12,9 +12,13 @@
 @use "blocks/media-query/faq";
 @use "blocks/media-query/footer";
 @use "blocks/media-query/gallery";
-@use "blocks/media-query/header";
+
 @use "blocks/media-query/hit";
 @use "blocks/media-query/news";
 @use "blocks/media-query/product";
 @use "blocks/media-query/promotion";
 @use "blocks/media-query/slider";
+
+@use "blocks/media-query/header";
+@use "blocks/media-query/burger-mobile-menu";
+@use "blocks/media-query/banner";

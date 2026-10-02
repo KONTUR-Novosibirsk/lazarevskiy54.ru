@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+    .banner{
+        padding: 188px 0;
+
+        &__content{
+            p{
+                max-width: 365px;
+                font-size: 16px;
+                line-height: normal;
+            }
+            .btn{
+                width: calc(100% - 46px);
+                max-width: 272px;
+                margin-top: 40px;
+            }
+        }
+    }
+}
