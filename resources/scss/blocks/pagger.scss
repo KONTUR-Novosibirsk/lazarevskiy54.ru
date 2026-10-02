@@ -1,0 +1,28 @@
+@use '/resources/scss/common/variables';
+
+.pagger {
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding-left: 0;
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: variables.$FontFamily;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            width: 40px;
+            height: 40px;
+            border-radius: 34px;
+            margin-bottom: 0;
+        }
+
+        li.active {
+            background-color: #1C2864;
+            color: #FFF;
+        }
+    }
+}

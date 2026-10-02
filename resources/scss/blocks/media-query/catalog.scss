@@ -1,0 +1,59 @@
+@use '/resources/scss/common/variables';
+
+@media (max-width: 1400px) {
+    .products-content_right {
+        flex: 0 0 100%;
+    }
+    .products-content_left {
+        display: none;
+    }
+    .products-item {
+        flex: 0 0 calc(25% - 14px);
+    }
+
+    .products-filter__btn_mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    .products-item {
+        flex: 0 0 calc(33.33% - 14px);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-item {
+        flex: 0 0 calc(50% - 14px);
+    }
+}
+
+@media (max-width: 576px) {
+    .products-item {
+        flex: 0 0 calc(100% - 14px);
+    }
+
+    .products-sorter {
+        display: flex;
+        column-gap: 12px;
+        margin-bottom: 32px;
+
+        div {
+            color: #6B7280;
+            font-family: variables.$FontFamily;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        a {
+            color: #6B7280;
+            font-family: variables.$FontFamily;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}

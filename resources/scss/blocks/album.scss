@@ -1,0 +1,24 @@
+.album {
+}
+.album-container {
+}
+.album-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -3px 42px;
+}
+.album-item {
+    position: relative;
+    flex: 0 0 calc(25% - 6px);
+    height: 345px;
+    margin: 0 3px 6px;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

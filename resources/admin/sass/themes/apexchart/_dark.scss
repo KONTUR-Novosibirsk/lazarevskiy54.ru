@@ -1,0 +1,19 @@
+html.dark {
+    .apexcharts-text {
+        fill: #838383;
+    }
+
+    .apexcharts-tooltip,
+    .apexcharts-tooltip-title {
+
+        background-color: #212121 !important;
+        color: #fff !important;
+        border: 1px solid #555 !important;
+    }
+
+    .apexcharts-legend-text {
+        color: #dadada !important;
+        border: 1px solid #555 !important;
+    }
+}
+

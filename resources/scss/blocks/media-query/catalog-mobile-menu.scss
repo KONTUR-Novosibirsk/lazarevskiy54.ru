@@ -1,0 +1,443 @@
+@use '/resources/scss/common/variables';
+
+@media (max-width: 1400px) {
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 56px;
+        background: #374151;
+        z-index: 200;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 56px;
+        }
+
+        &__item {
+            flex: 0 0 25%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            cursor: pointer;
+
+            p {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 0;
+                color: #FFF;
+
+            }
+
+            span {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 22px;
+                height: 22px;
+                text-align: center;
+                padding-top: 4px;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                color: #FFF;
+                background-color: #374FC7;
+                border-radius: 100%;
+            }
+        }
+
+        .cart-link {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .menu-home.current,
+    .menu-catalog.current,
+    .menu-cart.current,
+    .menu-list.current {
+        background-color: #374FC7;
+    }
+
+    .mobile-menu__item.fake-current {
+        background-color: #374FC7;
+    }
+
+    .mobile-menu__item.hide-current {
+        background-color: unset;
+    }
+
+    .catalog-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        scale: 0;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 150;
+
+        &__search {
+            flex: 0 0 100%;
+            margin-top: 30px;
+            form {
+                height: 100%;
+                position: relative;
+            }
+
+            input {
+                width: 100%;
+                height: 100%;
+                padding: 12px 15px;
+                outline: 0;
+                border-radius: 0px 2px 2px 0px;
+                border: 1px solid var(--unnamed, #374FC7);
+                background: #FFF;
+            }
+
+            button {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                width: 30px;
+                height: 30px;
+                border: 0;
+                outline: 0;
+                transform: translateY(-50%);
+                background: unset;
+                cursor: pointer;
+            }
+        }
+
+        &.active {
+            left: 0;
+        }
+
+
+        &__top {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 150px;
+            width: 100%;
+            background: #FFF;
+            padding: 30px;
+            z-index: 150;
+        }
+
+        .mobile-catalog__menu ul li a {
+            display: inline-block;
+            padding: 10px;
+            color: variables.$MainColorText;
+            font-family: variables.$FontFamily;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .mobile-catalog__menu .has-sub-menu {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .mobile-catalog__menu .has-sub-menu .sub-menu {
+            display: none;
+            padding-left: 20px;
+            flex: 0 0 100%;
+
+            li a {
+                display: inline-block;
+                font-family: variables.$FontFamily;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        .sub-menu__arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &.active {
+                transform: rotate(180deg);
+
+                svg path {
+                    stroke: #1C2864;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+
+        &__logo {
+            height: 40px;
+            width: 150px;
+            object-fit: contain;
+        }
+
+        &__close {
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+            text-transform: uppercase;
+            top: 40px;
+        }
+
+        &__heading {
+            font-family: variables.$FontFamily;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 15px;
+        }
+
+        &__content {
+            position: absolute;
+            left: 0;
+            top: 150px;
+            height: calc(100% - 150px);
+            width: 100%;
+            background: #fff;
+            z-index: 150;
+            padding: 30px;
+            overflow: auto;
+            padding-bottom: 85px;
+        }
+
+        &__item {
+            position: relative;
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid #c2c2c2;
+            transition: all 0.3s ease 0s;
+        }
+
+        &__section {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 15px 60px 15px 20px;
+            color: #373737;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        &__shadow {
+            position: fixed;
+            opacity: 0;
+            pointer-events: none;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            transition: all 0.5s ease 0s;
+        }
+    }
+
+    .catalog-menu.show {
+        scale: 1;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+    }
+
+    .catalog-menu.show .clearfix > li > ul {
+        display: block !important;
+    }
+
+    .modal-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        scale: 0;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 150;
+
+        &__top {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 150px;
+            width: 100%;
+            background: #FFF;
+            padding: 30px;
+            z-index: 150;
+        }
+
+        &__heading {
+            font-family: variables.$FontFamily;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 15px;
+        }
+
+        .mobile-modal__menu ul li a {
+            display: inline-block;
+            padding: 10px;
+            color: variables.$MainColorText;
+            font-family: variables.$FontFamily;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .mobile-modal__menu .has-sub-menu {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .mobile-modal__menu .has-sub-menu .sub-menu {
+            display: none;
+            padding-left: 20px;
+            flex: 0 0 100%;
+
+            li a {
+                display: inline-block;
+                font-family: variables.$FontFamily;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        .sub-menu__arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &.active {
+                transform: rotate(180deg);
+
+                svg path {
+                    stroke: #1C2864;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+
+        &__logo {
+            height: 40px;
+            width: 150px;
+            object-fit: contain;
+        }
+
+        &__close {
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+            text-transform: uppercase;
+            top: 40px;
+        }
+
+        &__content {
+            position: absolute;
+            left: 0;
+            top: 150px;
+            height: calc(100% - 150px);
+            width: 100%;
+            background: #fff;
+            z-index: 150;
+            padding: 30px;
+            overflow: auto;
+            padding-bottom: 85px;
+        }
+
+        &__content > ul > li:first-child {
+            display: none;
+        }
+
+        &__content > ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        &__content > ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            margin: 0 40px;
+            list-style-type: none;
+        }
+
+        &__content > ul > li.active a {
+            color: #96AC58;
+        }
+
+        .modal-menu__content > ul > li:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    .modal-menu.show {
+        scale: 1;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-menu__heading {
+        font-size: 24px;
+    }
+
+    .catalog-menu .mobile-catalog__menu ul li a {
+        font-size: 16px;
+    }
+
+    .modal-menu__heading {
+        font-size: 24px;
+    }
+
+    .modal-menu .mobile-modal__menu ul li a {
+        font-size: 16px;
+    }
+}

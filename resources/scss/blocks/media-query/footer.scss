@@ -1,0 +1,58 @@
+@media (max-width: 1400px) {
+    .footer-catalog {
+        display: none;
+    }
+
+    .footer {
+        padding: 40px 0 60px;
+    }
+
+    .footer-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-content_top {
+        flex-wrap: wrap;
+    }
+
+    .footer-logo {
+        margin-bottom: 30px;
+    }
+
+    .footer h5 {
+        margin-bottom: 15px;
+    }
+
+    .footer-contacts {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-socials {
+        margin-bottom: 20px;
+    }
+
+    .footer-content_bottom {
+        flex-wrap: wrap;
+    }
+
+    .footer-left {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-copyright {
+        margin-bottom: 10px;
+    }
+
+    .footer-middle {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-right {
+        margin-left: 0;
+    }
+}

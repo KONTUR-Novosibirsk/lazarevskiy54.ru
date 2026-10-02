@@ -1,0 +1,14 @@
+@use "common/normalize.css";
+@use "../../node_modules/swiper/swiper";
+@use "../../node_modules/swiper/modules/navigation";
+
+@use "common/fonts";
+@use "common/tailwind";
+@use "common/mixins";
+@use "common/variables";
+@use "common/style.scss";
+@use "blocks.scss";
+@use "media-query.scss";
+
+@use "common/loader";
+@use "common/ck-content";

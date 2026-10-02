@@ -1,0 +1,57 @@
+@use '/resources/scss/common/variables';
+
+.articles {
+}
+.articles-container {
+}
+.container {
+}
+.articles-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -18px;
+}
+.articles-item {
+    position: relative;
+    flex: 0 0 calc(33.33% - 36px);
+    height: 255px;
+    margin: 0 18px 36px;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+.articles-content {
+    position: absolute;
+    padding: 0 24px 24px;
+    left: 0;
+    bottom: 0;
+
+		&__heading {
+            color: #111827;
+            font-family: variables.$FontFamily;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 16px;
+		}
+
+		&__date {
+            color: #6B7280;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+		}
+}

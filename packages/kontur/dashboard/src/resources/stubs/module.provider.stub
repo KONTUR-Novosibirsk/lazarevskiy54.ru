@@ -1,0 +1,44 @@
+<?php
+
+namespace Modules\{{ ucFirstName }}\App\Providers;
+
+use Kontur\Dashboard\App\Modules\Menu\MenuItem;
+use Kontur\Dashboard\App\Modules\Module;
+use Kontur\Dashboard\App\Modules\ModuleProvider;
+
+class {{ ucFirstName }}ModuleProvider extends ModuleProvider
+{
+
+    protected string $name = '{{ name }}';
+
+    protected function init(): void
+    {
+        // app init
+    }
+
+    protected function run(): void
+    {
+        // after init app
+    }
+
+    protected function getModule(): Module
+    {
+        return new Module(
+            id: '{{ name }}',
+            name: 'Новый модуль',
+            sidebarItems: [
+                new MenuItem(
+                    name: 'Новый модуль',
+                    routeName: 'admin.index',
+                    icon: '<i class="bi bi-newspaper"></i>',
+                )
+            ]
+        );
+    }
+
+    protected function getDir(): string
+    {
+        return __DIR__;
+    }
+
+}

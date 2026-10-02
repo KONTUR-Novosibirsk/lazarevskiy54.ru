@@ -1,0 +1,77 @@
+.layout-container {
+    .el-aside {
+        @apply bg-white dark:bg-neutral-900 text-gray-600 dark:text-white;
+        width: auto;
+
+        @media (max-width: 991px) {
+            transition: .7s;
+            height: calc(100% - 55px) !important;
+            top: 55px;
+            left: 0;
+            position: fixed;
+            transform: translate3d(-16rem, 0, 0);
+            width: 16rem;
+            z-index: 100;
+            &.show-aside-mobile {
+                transform: translateZ(0);
+
+                .kontur-copy {
+                    display: none;
+                }
+            }
+        }
+
+        &.sidebar {
+            width: 13%;
+        }
+    }
+
+    .el-menu {
+        border-right: none;
+        @apply bg-white dark:bg-neutral-900;
+
+        .el-menu-item {
+            @apply text-neutral-800 dark:text-white text-sm font-semibold;
+
+            .el-icon, .iconify {
+                font-size: 15px;
+                opacity: .7;
+            }
+
+            &:hover, &.is-active {
+                @apply bg-gray-100 dark:bg-neutral-950 border-r-4 border-blue-600 dark:border-blue-800;
+            }
+        }
+
+        .el-sub-menu {
+            .el-icon, .iconify {
+                font-size: 15px;
+                opacity: .7;
+            }
+
+            .el-sub-menu__title {
+                @apply text-neutral-800 dark:text-white text-sm font-semibold;
+
+                &:hover {
+                    @apply bg-gray-100 dark:bg-neutral-950;
+                }
+            }
+        }
+    }
+
+    .el-main {
+        padding: 0;
+    }
+
+    .el-header {
+        @apply bg-white text-gray-400 shadow-sm dark:bg-neutral-900 dark:text-white;
+        .el-header-item {
+            @apply w-8 h-8 flex bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 transition duration-300 rounded-full cursor-pointer relative select-none text-gray-600 dark:text-white;
+        }
+    }
+
+    .main-container {
+        @apply h-screen;
+    }
+
+}

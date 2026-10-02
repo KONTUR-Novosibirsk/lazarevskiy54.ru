@@ -1,0 +1,56 @@
+@use '/resources/scss/common/variables';
+
+.form-label {
+    display: block;
+    font-family: variables.$FontFamily;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #374151;
+    margin-bottom: 8px;
+
+    &.required {
+        &:after {
+            margin-left: .2rem;
+            content: '*';
+            color: #E32525;
+        }
+    }
+}
+
+.form-control {
+    width: 100%;
+    padding: 13px 16px;
+    color: #374151;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: variables.$FontFamily;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    outline: 0;
+    border-radius: 2px;
+    border: 1px solid #D1D5DB;
+    background: #FFF;
+
+    &textarea {
+        min-height: 95px;
+        resize: none;
+    }
+
+    &.is-invalid {
+        border: 1px solid #E32525;
+    }
+
+    ~ .invalid-feedback {
+        margin-top: 2px;
+        color: #E32525;
+        font-size: 0.8rem;
+    }
+}
+
+.form-mb {
+ /*   margin-bottom: .5rem;*/
+}
+

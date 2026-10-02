@@ -1,0 +1,27 @@
+@media (max-width: 1400px) {
+    .hit-item {
+        flex: 0 0 calc(33.3% - 14px);
+    }
+
+    .hit {
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hit-list__more {
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hit-item {
+        flex: 0 0 calc(50% - 14px);
+    }
+}
+
+@media (max-width: 576px) {
+    .hit-item {
+        flex: 0 0 calc(100% - 14px);
+    }
+}

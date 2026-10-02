@@ -1,0 +1,7 @@
+@use './apexchart/dark';
+
+html.dark {
+    --el-box-shadow-light: 0px 0px 8px rgba(0, 0, 0, 0.42);
+    --el-color-danger: #c74220;
+    --el-color-primary: #3478f7;
+}

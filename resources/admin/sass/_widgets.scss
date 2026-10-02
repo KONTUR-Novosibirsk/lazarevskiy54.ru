@@ -1,0 +1,18 @@
+.widget-size-1, .widget-size-2, .widget-size-3 {
+    width: 100%;
+}
+
+@media (min-width: 1280px) {
+    .widget-size-1 {
+        flex: 1 1 calc((100% / 3) - 2rem);
+    }
+
+    .widget-size-2 {
+        flex: 1 1 calc((100% / 3 * 2) - 2rem);
+    }
+
+    .widget-size-3 {
+        flex: 1 1 100%;
+    }
+}
+

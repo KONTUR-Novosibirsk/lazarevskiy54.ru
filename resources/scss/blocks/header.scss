@@ -1,0 +1,66 @@
+@use '/resources/scss/common/variables';
+@use "/resources/scss/common/mixins";
+
+.header-fixed {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.10);
+    background: #FFFFFF;
+    z-index: 100;
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    color: #FFF;
+    padding: 29px 0;
+
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+    }
+    &__logo{
+        width: 94px;
+        flex-shrink: 0;
+    }
+    &__nav{
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            li{
+                margin-bottom: 0;
+                a{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    &__left{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+    &__contacts{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &__item{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 110%;
+        }
+    }
+}

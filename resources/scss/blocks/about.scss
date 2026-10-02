@@ -1,0 +1,45 @@
+@use '/resources/scss/common/variables';
+
+.about {
+    padding-bottom: 80px;
+}
+
+.about-heading {
+    margin-bottom: 35px;
+    a {
+        display: inline-flex;
+        align-items: center;
+        font-family: variables.$FontFamily;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: variables.$MainColorText;
+        transition: all 0.3s ease;
+
+
+        &::after {
+            content: '';
+            margin-left: 12px;
+            width: 40px;
+            height: 40px;
+            background: url(/resources/images/heading-arrow.svg);
+        }
+    }
+
+    a:hover {
+        color: variables.$AdditionalColorText;
+    }
+}
+
+.about-content {
+    p {
+        font-family: variables.$FontFamily;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%;
+        margin-bottom: 10px;
+        color: variables.$MainColorText;
+    }
+}

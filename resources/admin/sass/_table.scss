@@ -1,0 +1,8 @@
+.v-table {
+    @apply bg-white dark:bg-neutral-900 shadow-sm;
+}
+
+.el-table thead {
+    @apply text-neutral-700 dark:text-white;
+}
+

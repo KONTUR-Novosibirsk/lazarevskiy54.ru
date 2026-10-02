@@ -1,0 +1,27 @@
+{
+    "name": "galtsevt/laravel-storage",
+    "description": "Relations for files and images",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Galtsev Timofey",
+            "email": "galtsev.t@yandex.ru"
+        }
+    ],
+    "require": {
+        "intervention/image": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Galtsevt\\LaravelStorage\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Galtsevt\\LaravelStorage\\App\\Providers\\StorageServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@use '/resources/scss/common/variables';
+
+.error {
+
+    &-code {
+        color: #374151;
+        text-align: center;
+        font-family: variables.$FontFamily;
+        font-size: 200px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &-title {
+        color: #111827;
+        text-align: center;
+        font-family: variables.$FontFamily;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 16px;
+    }
+
+    &-description {
+        color: #111827;
+        text-align: center;
+        font-family: variables.$FontFamily;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%;
+        margin-bottom: 32px;
+    }
+
+    &-btn {
+        display: block;
+        width: 200px;
+        padding: 10px 0;
+        color: #FFF;
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 2px;
+        background: #374FC7;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: #FFF;
+            background: variables.$AdditionalColorText;
+        }
+    }
+}
+.error-container {
+}
+.container {
+}

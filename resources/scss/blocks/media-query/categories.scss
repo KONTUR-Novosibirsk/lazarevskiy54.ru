@@ -1,0 +1,17 @@
+@media (max-width: 1400px) {
+    .categories-item {
+        flex: 0 0 calc(33.3% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-item {
+        flex: 0 0 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 576px) {
+    .categories-item {
+        flex: 0 0 calc(100% - 30px);
+    }
+}

@@ -1,0 +1,113 @@
+.select {
+    display: block;
+}
+
+.filter-label {
+    color: #2C3244;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.select-item {
+    position: relative;
+}
+
+.select-head {
+    position: relative;
+    padding: 11px 10px;
+    border-radius: 4px;
+    background: #FFF;
+    color: #ADC0D2;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    max-width: 100%;
+    width: 240px;
+
+    .selected__item {
+        background: #dfe3e6;
+        border-radius: 5px;
+        margin-right: 2px;
+        padding-left: 4px;
+        padding-right: 4px;
+        color: #5D7082;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 15px;
+        width: 8px;
+        height: 6px;
+        background: url(/resources/images/select-img.svg);
+    }
+}
+
+.select-body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fafafa;
+    border-radius: 4px;
+    max-height: 210px;
+    overflow-y: auto;
+    z-index: 100;
+    margin-top: 5px !important;
+    border: 1px solid #d9dfe7;
+}
+
+.select-option {
+    padding: 11px 10px;
+    color: #2C3244;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &.selected {
+        background: #ADC0D2;
+    }
+
+    &:hover {
+        background: #c4daee;
+    }
+}
+
+.filter-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    .filter-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .8rem;
+        font-weight: 500;
+        color: #2C3244;
+        border-radius: 4px;
+        border: 1px solid #d0d1d3;
+        padding: 8px 5px;
+        cursor: pointer;
+        flex: 1 1 calc((100% / 2) - 2rem);
+        text-align: center;
+
+        &.selected {
+            color: #F21E44;
+            border: 1px solid #F21E44;
+        }
+    }
+}

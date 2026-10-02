@@ -1,0 +1,490 @@
+@use '/resources/scss/common/variables';
+
+
+.product {
+    padding-bottom: 80px;
+}
+
+.product-container {
+}
+
+.container {
+}
+
+.product-heading {
+}
+
+.product-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__left {
+        position: relative;
+        flex: 0 0 550px;
+        width: 550px;
+        margin-right: 50px;
+    }
+
+    &__right {
+        flex: 1 1 auto;
+    }
+
+    &__bottom {
+        flex: 0 0 100%;
+        margin-top: 56px;
+    }
+}
+
+.product-slider {
+    &_main {
+        margin-bottom: 16px;
+
+        .product-slide {
+            position: relative;
+            display: block;
+            height: 550px;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &_navigate {
+        width: 460px;
+
+        .product-slide {
+            position: relative;
+            display: block;
+            height: 97px;
+            cursor: pointer;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .swiper-slide-thumb-active {
+            border: 1px solid variables.$AdditionalColorText;
+        }
+    }
+}
+
+.product-slider__container {
+    display: flex;
+    align-items: center;
+}
+
+.product-next,
+.product-prev {
+    cursor: pointer;
+}
+
+.product-price {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &_new {
+        font-family: variables.$FontFamily;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #111827;
+        margin-right: 10px;
+    }
+
+    &_old {
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: line-through;
+        color: #6B7280;
+    }
+}
+
+.product-offer {
+    margin-bottom: 32px;
+
+    &__heading {
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 16px;
+    }
+
+    &__body {
+        display: flex;
+        column-gap: 12px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        border: 3px solid rgb(209, 208, 208);
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 5px;
+        &.active {
+            border: 3px solid rgb(211, 88, 21);
+        }
+    }
+}
+
+
+.product-offer_colors .product-offer__item input:checked + label {
+    border: 3px solid variables.$AdditionalColorText;
+}
+
+.product-offer_sizes .product-offer__item input:checked + label {
+    border: 3px solid variables.$AdditionalColorText;
+    background-color: variables.$AdditionalColorText;
+    color: #FFF;
+}
+
+.product-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: variables.$FontFamily;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 2px;
+    padding: 10px 25px;
+    background: #374FC7;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.product-description {
+    max-width: 750px;
+    margin-bottom: 56px;
+
+    &__heading {
+        color: #111827;
+        font-family: variables.$FontFamily;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 32px;
+    }
+
+    &__body {
+        font-family: variables.$FontFamily;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%;
+        color: #111827;
+    }
+}
+
+.product-characteristic {
+    max-width: 750px;
+
+    &__heading {
+        font-family: variables.$FontFamily;
+        font-size: 36px;
+        margin-bottom: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #111827;
+    }
+
+    &__list {
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    &__name {
+        color: #111827;
+        font-family: variables.$FontFamily;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 24px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__content:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__left {
+        color: #111827;
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__dotted {
+        flex: 1 1 auto;
+        border-bottom: 1px dotted #6B7280;
+    }
+
+    &__right {
+        color: #111827;
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.product-similar {
+    padding-bottom: 80px;
+
+    h2 {
+        font-family: variables.$FontFamily;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #111827;
+        margin-bottom: 32px;
+    }
+
+    .products-item {
+        &__img {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease;
+            }
+        }
+
+        &__img:hover {
+            img {
+                scale: 1.2;
+            }
+        }
+
+        &__content {
+            padding: 8px 10px 20px;
+        }
+
+        &__price {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+
+            &_new {
+                margin-right: 15px;
+                font-family: variables.$FontFamily;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                color: variables.$SecondColorText;
+            }
+
+            &_old {
+                font-family: variables.$FontFamily;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration: line-through;
+                color: #6B7280;
+            }
+        }
+
+        &__title {
+            margin-bottom: 35px;
+            font-family: variables.$FontFamily;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            height: 48px;
+            overflow: hidden;
+            color: variables.$MainColorText;
+
+            a {
+                transition: all 0.3s ease;
+            }
+        }
+
+        &__title a:hover {
+            color: variables.$AdditionalColorText;
+        }
+
+        &__btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            font-family: variables.$FontFamily;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-radius: 2px;
+            border: 1px solid variables.$AdditionalColorText;
+            background: #FFF;
+            color: variables.$AdditionalColorText;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: variables.$MainColorText;
+                border-color: variables.$MainColorText;
+            }
+        }
+    }
+}
+
+.product-watched {
+    h2 {
+        font-family: variables.$FontFamily;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #111827;
+        margin-bottom: 32px;
+    }
+
+    .products-item {
+        &__img {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease;
+            }
+        }
+
+        &__img:hover {
+            img {
+                scale: 1.2;
+            }
+        }
+
+        &__content {
+            padding: 8px 10px 20px;
+        }
+
+        &__price {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+
+            &_new {
+                margin-right: 15px;
+                font-family: variables.$FontFamily;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                color: variables.$SecondColorText;
+            }
+
+            &_old {
+                font-family: variables.$FontFamily;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration: line-through;
+                color: #6B7280;
+            }
+        }
+
+        &__title {
+            margin-bottom: 35px;
+            font-family: variables.$FontFamily;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            height: 48px;
+            overflow: hidden;
+            color: variables.$MainColorText;
+
+            a {
+                transition: all 0.3s ease;
+            }
+        }
+
+        &__title a:hover {
+            color: variables.$AdditionalColorText;
+        }
+
+        &__btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            font-family: variables.$FontFamily;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-radius: 2px;
+            border: 1px solid variables.$AdditionalColorText;
+            background: #FFF;
+            color: variables.$AdditionalColorText;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: variables.$MainColorText;
+                border-color: variables.$MainColorText;
+            }
+        }
+    }
+}
+
+.product-tabs {
+    display: none;
+}

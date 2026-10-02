@@ -1,0 +1,10 @@
+.el-card {
+    --el-card-padding: 15px;
+    --el-card-border-radius: 10px;
+    border-color: transparent;
+    @apply rounded-lg;
+
+    .el-card__header {
+        @apply font-semibold;
+    }
+}

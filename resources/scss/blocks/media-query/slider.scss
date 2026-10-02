@@ -1,0 +1,24 @@
+@media (max-width: 1400px) {
+    .categories {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-slider {
+        padding: 16px 0 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-slider__navigation,
+    .main-slider__pagination {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-slider__item {
+        height: 250px;
+    }
+}

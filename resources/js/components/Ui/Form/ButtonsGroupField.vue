@@ -1,0 +1,111 @@
+<template>
+    <div class="">
+        <div class="filter-label">{{ label }}</div>
+        <div class="filter-btn-group">
+            <template v-for="item in filteredData">
+                <div class="filter-btn" role="button" :class="{selected: selected(item)}" @click="select(item)">
+                    {{ item.value }}
+                </div>
+            </template>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "ButtonsGroupField",
+    props: {
+        label: null,
+        required: {
+            type: Boolean,
+            default: false,
+        },
+        name: String,
+        modelValue: [Array],
+        data: Object,
+        errors: {
+            type: Array,
+            default: null,
+        }
+    },
+    watch: {
+        modelValue() {
+            if (typeof this.modelValue === 'string') {
+                this.$emit('update:modelValue', null);
+            }
+        }
+    },
+    data() {
+        return {
+            defaultSelected: {
+                key: 0, value: 'Не выбрано',
+            },
+            search: '',
+            show: false,
+        }
+    },
+    computed: {
+        selectedItems() {
+            let selected = []
+            if (this.modelValue) {
+                if (this.modelValue.length === 0) {
+                    return null
+                }
+                for (let item in this.data) {
+                    if (this.modelValue.includes(this.data[item].key)) {
+                        selected.push(this.data[item])
+                    }
+                }
+                return selected
+            }
+            return null
+
+        },
+        filteredData() {
+            return this.data.filter((element) => {
+                return element.value.toLowerCase().indexOf(this.search) > -1;
+            });
+        }
+    },
+    methods: {
+        selected(item) {
+            if (this.modelValue) {
+                return this.modelValue.includes(item.key)
+            }
+            return false
+        },
+        showOptions() {
+            this.show = !this.show;
+        },
+        hideOptions() {
+            this.show = false
+        },
+        async select(item) {
+            let modelValue
+            if (this.modelValue) {
+                modelValue = this.modelValue
+            } else {
+                modelValue = []
+            }
+            for (let itemValue in modelValue) {
+                if (modelValue[itemValue] === item.key) {
+                    modelValue.splice(itemValue, 1)
+                    if (modelValue.length === 0) {
+                        modelValue = null
+                    }
+                    this.$emit('update:modelValue', modelValue);
+                    this.$emit('change');
+                    return true
+                }
+            }
+            modelValue.push(item.key)
+            this.$emit('update:modelValue', modelValue);
+            this.$emit('change');
+        }
+    }
+}
+</script>
+
+<style scoped>
+
+</style>

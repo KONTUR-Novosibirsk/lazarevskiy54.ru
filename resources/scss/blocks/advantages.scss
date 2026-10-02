@@ -1,0 +1,48 @@
+@use "/resources/scss/common/variables";
+
+.advantages {
+    padding-bottom: 80px;
+
+    &__container {
+    }
+}
+.container {
+}
+.advantages-heading {
+    margin-bottom: 35px;
+    font-family: variables.$FontFamily;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: variables.$MainColorText;
+}
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.advantages-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 15px 30px;
+    flex: 0 0 calc(25% - 30px);
+    &__ico {
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-family: variables.$FontFamily;
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: variables.$SecondColorText;
+    }
+}

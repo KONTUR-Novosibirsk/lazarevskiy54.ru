@@ -1,0 +1,17 @@
+// Body
+$layout-color: #222222;
+$layout-text-color: #eaeaea;
+$white: #fff;
+
+:root {
+    --el-color-primary: #4880ff;
+    --el-color-danger: #ef4444;
+    --el-menu-item-height: 48px !important;
+    --el-box-shadow-light: 0px 0px 4px rgba(0, 0, 0, 0.12);
+}
+
+html.dark {
+    --el-fill-color-blank: #141414;
+    --el-bg-color-overlay: #171717;
+    --el-border-color: #303033;
+}

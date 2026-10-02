@@ -1,0 +1,128 @@
+@use '/resources/scss/common/variables';
+
+@media (max-width: 1400px) {
+    .header_top-content {
+        justify-content: space-between;
+    }
+    .header_top-menu {
+        display: none;
+    }
+
+    .header_middle-search {
+        flex: 0 0 530px;
+    }
+
+    .header_bottom {
+        display: none;
+    }
+
+    .header_middle-cart {
+        display: none;
+    }
+
+    .header_middle-login {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .header_middle-search {
+        display: none;
+    }
+
+    .header_middle-login {
+        position: unset;
+    }
+
+    .header_middle-login .login-popup {
+        right: 0;
+        left: unset;
+        transform: unset;
+        top: calc(100% + 5px);
+    }
+
+    .header-search_mobile {
+        display: block;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+
+    .header-search__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .header_middle__content .header-search_mobile {
+        display: block;
+    }
+
+    .header-search__popup {
+        display: none;
+        position: absolute;
+        top: 110%;
+        left: 15px;
+        right: 15px;
+
+        form {
+            position: relative;
+            input {
+                width: 100%;
+                padding: 10px 15px;
+                border: 1px solid #374FC7;
+                border-radius: 10px;
+                outline: 0;
+                font-family: variables.$FontFamily;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            button {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                width: 30px;
+                height: 30px;
+                background: unset;
+                padding: 0;
+                margin: 0;
+                transform: translateY(-50%);
+                border: unset;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header_top {
+        display: none;
+    }
+
+    .header_middle__content .header-burger {
+        margin-right: 10px;
+    }
+
+    .header_middle__content .header-search_mobile {
+        margin-right: 10px;
+    }
+
+    .header_middle-logo {
+        flex: 0 0 90px;
+
+        a {
+            width: 90px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header_middle-login .login-popup {
+        left: 0;
+        right: 0;
+        width: unset;
+    }
+}

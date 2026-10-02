@@ -1,0 +1,38 @@
+@use 'bvi/dist/css/bvi.min.css';
+
+body .bvi-body a.bvi-link {
+    right: inherit !important;
+    left: 1.5rem !important;
+}
+
+.bvi-images-image {
+    background-image: url("/public/img/image.svg") !important;
+}
+
+.bvi-images-minus-circle {
+    background-image: url("/public/img/minus-circle.svg") !important;
+}
+
+.bvi-images-adjust {
+    background-image: url("/public/img/adjust.svg") !important;
+}
+
+.bvi-images-volume-off {
+    background-image: url("/public/img/volume-off.svg") !important;
+}
+
+.bvi-images-volume-up {
+    background-image: url("/public/img/volume-up.svg") !important;
+}
+
+.bvi-images-cog {
+    background-image: url("/public/img/cog.svg") !important;
+}
+
+.bvi-images-minus {
+    background-image: url("/public/img/minus.svg") !important;
+}
+
+.bvi-images-eye {
+    background-image: url("/public/img/eye.svg") !important;
+}

@@ -1,0 +1,11 @@
+@media (max-width: 992px) {
+    .articles-item {
+        flex: 0 0 calc(50% - 36px);
+    }
+}
+
+@media (max-width: 576px) {
+    .articles-item {
+        flex: 0 0 calc(100% - 36px);
+    }
+}

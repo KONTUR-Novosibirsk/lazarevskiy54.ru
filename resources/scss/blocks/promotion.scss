@@ -1,0 +1,94 @@
+@use '/resources/scss/common/variables';
+@use "/resources/scss/common/mixins";
+
+
+.promotion {
+    padding-bottom: 80px;
+}
+
+.promotion-heading {
+    margin-bottom: 35px;
+    a {
+        display: inline-flex;
+        align-items: center;
+        font-family: variables.$FontFamily;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: variables.$MainColorText;
+        transition: all 0.3s ease;
+
+        &::after {
+            content: '';
+            margin-left: 12px;
+            width: 40px;
+            height: 40px;
+            background: url(/resources/images/heading-arrow.svg);
+        }
+    }
+
+    a:hover {
+        color: variables.$AdditionalColorText;
+    }
+}
+
+
+.promotion-item {
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.promotion-item:hover .promotion-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.promotion-content {
+    display: block;
+}
+
+.promotion-text {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 15px;
+    background: rgba(53, 53, 53, 0.699);
+    @include mixins.set_hover(0.3s);
+
+		&__title {
+            font-family: variables.$FontFamily;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            height: 30px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+		}
+
+		&__subtitle {
+            font-family: variables.$FontFamily;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+            height: 40px;
+            overflow: hidden;
+            color: #FFFFFF;
+		}
+}

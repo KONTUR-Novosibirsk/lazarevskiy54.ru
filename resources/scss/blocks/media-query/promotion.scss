@@ -1,0 +1,17 @@
+@media (max-width: 1200px) {
+    .promotion-text {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .promotion {
+        padding-bottom: 40px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .promotion-item {
+        height: 200px;
+    }
+}

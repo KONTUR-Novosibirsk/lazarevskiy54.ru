@@ -1,0 +1,44 @@
+@use '/resources/scss/common/variables';
+
+.search {
+}
+
+.search-container {
+}
+
+.container {
+}
+
+.search-head {
+    color: #111827;
+    font-family: variables.$FontFamily;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 48px;
+}
+
+.search-content {
+}
+
+.search-content-products {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.search-item {
+    margin-bottom: 36px;
+
+    &__heading {
+        display: inline-block;
+        color: #374151;
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 8px;
+    }
+}

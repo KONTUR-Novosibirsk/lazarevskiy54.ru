@@ -1,0 +1,172 @@
+@use '/resources/scss/common/variables';
+
+.hit {
+    padding-bottom: 80px;
+
+    &__container {
+    }
+}
+.hit-heading {
+    margin-bottom: 35px;
+    a {
+        display: inline-flex;
+        align-items: center;
+        font-family: variables.$FontFamily;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: variables.$MainColorText;
+        transition: all 0.3s ease;
+
+
+        &::after {
+            content: '';
+            margin-left: 12px;
+            width: 40px;
+            height: 40px;
+            background: url(/resources/images/heading-arrow.svg);
+        }
+    }
+
+    a:hover {
+        color: variables.$AdditionalColorText;
+    }
+}
+
+.hit-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -7px;
+}
+.hit-item {
+    display: none;
+    margin: 0 7px 14px;
+    flex: 0 0 calc(20% - 14px);
+    &__img {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &__img:hover {
+        img {
+            scale: 1.2;
+        }
+    }
+
+    &__content {
+        padding: 8px 10px 20px;
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        &_new {
+            margin-right: 15px;
+            font-family: variables.$FontFamily;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            color: variables.$SecondColorText;
+        }
+
+        &_old {
+            font-family: variables.$FontFamily;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: line-through;
+            color: #6B7280;
+        }
+    }
+
+    &__title {
+        margin-bottom: 35px;
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        height: 48px;
+        overflow: hidden;
+        color: variables.$MainColorText;
+
+        a {
+            transition: all 0.3s ease;
+        }
+    }
+
+    &__title a:hover {
+        color: variables.$AdditionalColorText;
+    }
+
+    &__btn {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        font-family: variables.$FontFamily;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 2px;
+        border: 1px solid variables.$AdditionalColorText;
+        background: #FFF;
+        color: variables.$AdditionalColorText;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: variables.$MainColorText;
+            border-color: variables.$MainColorText;
+        }
+    }
+}
+
+.hit-list__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: variables.$FontFamily;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 210px;
+    margin: 32px auto 0;
+    border-radius: 2px;
+    padding: 10px 0;
+    color: #374FC7;
+    border: 1px solid #374FC7;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: variables.$MainColorText;
+    }
+
+    &::after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+        background: url(/resources/images/hit-list__more.svg) no-repeat;
+    }
+}

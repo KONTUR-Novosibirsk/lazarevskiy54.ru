@@ -1,0 +1,36 @@
+@use '/resources/scss/common/variables';
+
+.breadcrumbs {
+    display: flex;
+    margin: 32px 0 20px;
+}
+.breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    a, span {
+        font-family: variables.$FontFamily;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    a {
+        color: #5065CE;
+    }
+
+    span {
+        color: #6B7280;
+    }
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+    content: "/";
+    margin: 0 5px;
+    color: #6B7280;
+    font-family: variables.$FontFamily;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

@@ -1,0 +1,13 @@
+.layout-container {
+    .el-aside {
+        @apply text-white bg-neutral-800;
+    }
+
+    .el-menu {
+        border-right: none;
+    }
+
+    .el-main {
+        padding: 0;
+    }
+}

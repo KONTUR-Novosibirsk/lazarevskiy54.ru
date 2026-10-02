@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 calc(100% - 30px);
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-item__img {
+        height: 200px;
+    }
+
+    .gallery-item__title {
+        padding: 18px ;
+    }
+}

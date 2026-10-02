@@ -1,0 +1,114 @@
+@use '/resources/scss/common/variables';
+
+@media (max-width: 992px) {
+    .product-content {
+        justify-content: center;
+    }
+
+    .product-content__left {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .product {
+        padding-bottom: 30px;
+    }
+
+    .product-price {
+        &_new {
+            font-size: 24px;
+        }
+
+        &_old {
+            font-size: 16px;
+        }
+    }
+
+    .product-content__bottom {
+        margin-top: 40px;
+    }
+
+    .product-description__heading {
+        display: none;
+    }
+
+    .product-characteristic__heading {
+        display: none;
+    }
+
+    .product-tabs__content {
+        display: none;
+        margin-bottom: 0;
+    }
+
+    .product-tabs__content.active {
+        display: block;
+    }
+
+    .product-description__body {
+        font-size: 16px;
+    }
+
+    .product-characteristic__name {
+        margin-bottom: 20px;
+    }
+
+    .product-characteristic__item:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    .product-tabs {
+        display: flex;
+        column-gap: 36px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #D1D5DB;
+
+		&__item {
+            font-family: variables.$FontFamily;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            color: #6B7280;
+            padding-bottom: 10px;
+            cursor: pointer;
+		}
+
+        &__item.active {
+            color: #1C2864;
+            border-bottom: 1px solid #1C2864;
+        }
+    }
+
+    .product-similar {
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-content__left {
+        flex: 0 0 290px;
+        width: 290px;
+    }
+
+    .product-similar h2,
+    .product-watched h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    .product-slider_main .product-slide {
+        height: 290px;
+    }
+
+    .product-slider_navigate .product-slide {
+        height: 60px;
+    }
+
+    .product-slider_navigate {
+        margin: 0 10px;
+    }
+}

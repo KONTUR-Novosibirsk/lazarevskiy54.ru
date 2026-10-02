@@ -1,0 +1,275 @@
+@use 'mixins';
+@use 'variables';
+
+// Обнуление стилей
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+.fancybox-slide--html,
+.fancybox__slide--html {
+    padding: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+.container {
+    @include mixins.Container
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.wrapper.page-content footer {
+    margin-top: 60px;
+}
+
+body {
+    font-family: variables.$FontFamily;
+    color: variables.$MainColorText;
+}
+
+html.lock {
+    overflow: hidden;
+}
+
+h1 {
+    font-family: variables.$TitleFontFamily;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 1.04;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-family: variables.$TitleFontFamily;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+h3 {
+    font-family: variables.$TitleFontFamily;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+h4 {
+    font-family: variables.$TitleFontFamily;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+h5 {
+    font-family: variables.$TitleFontFamily;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+h6 {
+    font-family: variables.$TitleFontFamily;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+p {
+    font-family: variables.$FontFamily;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 24px;
+    color: variables.$SecondColorText;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 24px;
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+.btn{
+    width: fit-content;
+    display: block;
+    padding: 20px 40px;
+    border-radius: 100px;
+    background: variables.$AdditionalColorText;
+    color: #FFF;
+    font-family: variables.$TitleFontFamily;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    position: relative;
+    margin-right: 65px;
+    box-shadow: 65px 0 0 0 #134E09;
+    z-index: 1;
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -40px;
+        width: 17px;
+        height: 14px;
+        background: no-repeat center/contain url('/public/images/button-arrow.svg');
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        background: variables.$AdditionalColorText;
+        z-index: -1;
+        transition: variables.$time;
+    }
+    &:hover:before{
+        transform: translateX(65px);
+    }
+
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #000;
+        margin-bottom: 24px;
+    }
+}

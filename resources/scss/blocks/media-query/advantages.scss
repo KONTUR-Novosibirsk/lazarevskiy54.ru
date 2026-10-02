@@ -1,0 +1,21 @@
+@media (max-width: 1200px) {
+    .advantages {
+        padding-bottom: 40px;
+    }
+
+    .advantages-item {
+        flex: 0 0 calc(33.3% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .advantages-item {
+        flex: 0 0 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 576px) {
+    .advantages-item {
+        flex: 0 0 calc(100% - 30px);
+    }
+}
